@@ -1,0 +1,168 @@
+/* additional styles for our website */
+html {
+  font-size: 100%;
+}
+
+body{
+  display: block;
+  background-color: rgb(253, 249, 244);
+  font-size: 1rem; /* Scales with device */
+  min-height: 100hv;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  line-height: 1.6;
+}
+header {
+  margin-bottom: 2rem;
+}
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #C80060;
+  margin-top: 0;
+  
+}
+h2,h3 {
+  font-family: Georgia, serif;
+  
+  color: #C80060;
+  margin-top: 0;
+}
+img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  height: auto;
+}
+
+ul{
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  text-align:left;
+}
+figcaption{
+  font-style: italic;
+  color: rgb(0, 86, 0);
+}
+table{
+  display: table;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  text-align: start;
+}
+table, tr, th, td, caption{
+  border: 2px solid black;
+  font-family: 'Courier New', Courier, monospace;
+  border-collapse: collapse;
+  padding: 1rem;
+}
+.tac{
+  font-size: 20px;
+}
+/*Made the navigation bar sticky so it stays visible when users scrol*/
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #C80060;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: #800020;
+  text-decoration: underline;
+}
+/*Added zebra striping for better readability*/
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+/*Styled the caption to stand out*/
+caption {
+  font-weight: bold;
+  font-size: 24px;
+  color: #C80060;
+  margin-bottom: 10px;
+}
+/*Improved the contact form design for better usability*/
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+input, textarea, button {
+  font-size: 18px;
+  padding: 0.5rem;
+  border: 2px solid #C80060;
+  border-radius: 5px;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #800020;
+  box-shadow: 0 0 5px rgba(200, 0, 96, 0.5);
+}
+button {
+  background-color: #C80060;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #800020;
+  transform: scale(1.05);
+}
+/*Centered the footer text and add padding*/
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #f3f3f3;
+  border-top: 1px solid #333;
+}
+/*Maked the "Back to Top" links more visually engaging*/
+a[href="#"] {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #C80060;
+  font-weight: bold;
+  border: 2px solid #C80060;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+}
+a[href="#"]:hover {
+  background-color: #C80060;
+  color: white;
+}
+/*Ensured the layout looks good on smaller screens*/
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  table {
+    font-size: 18px;
+  }
+  body {
+    font-size: 18px;
+  }
+}
