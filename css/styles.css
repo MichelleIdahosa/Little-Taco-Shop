@@ -1,145 +1,152 @@
-/* additional styles for our website */
+/* General Styles */
+/* Apply a neutral background color and set base font size and line height */
 html {
-  font-size: 100%;
+  font-size: 100%; /* Default base font size for scaling */
 }
 
-body{
+body {
   display: block;
-  background-color: rgb(253, 249, 244);
-  font-size: 1rem; /* Scales with device */
-  min-height: 100hv;
-  max-width: 800px;
-  margin: auto;
-  padding: 1rem;
-  border-left: 1px solid #333;
+  background-color: rgb(253, 249, 244); /* Soft beige background for a warm look */
+  font-family: Arial, sans-serif; /* Use a clean, readable font */
+  font-size: 1rem; /* 16px by default */
+  line-height: 1.6; /* Improved text readability */
+  max-width: 800px; /* Restrict the page width for better readability */
+  margin: auto; /* Center the content horizontally */
+  padding: 1rem; /* Add breathing room around the edges */
+  border-left: 1px solid #333; /* Subtle borders to define content area */
   border-right: 1px solid #333;
-  line-height: 1.6;
 }
+
+/* Header Styles */
 header {
   margin-bottom: 2rem;
 }
-h1{
+
+h1 {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #C80060;
+  color: #C80060; /* A bold red-pink color for the title */
   margin-top: 0;
-  
-}
-h2,h3 {
-  font-family: Georgia, serif;
-  
-  color: #C80060;
-  margin-top: 0;
-}
-img {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 100%;
-  height: auto;
+  text-align: center; /* Center-align the main title */
 }
 
-ul{
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
-  text-align:left;
+h2, h3 {
+  font-family: Georgia, serif;
+  color: #C80060;
+  margin-top: 0;
 }
-figcaption{
-  font-style: italic;
-  color: rgb(0, 86, 0);
+
+/* Image Styling */
+img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
 }
-table{
-  display: table;
-  box-sizing: border-box;
-  text-indent: initial;
-  border-spacing: 2px;
-  text-align: start;
-}
-table, tr, th, td, caption{
-  border: 2px solid black;
-  font-family: 'Courier New', Courier, monospace;
-  border-collapse: collapse;
-  padding: 1rem;
-}
-.tac{
-  font-size: 20px;
-}
-/*Made the navigation bar sticky so it stays visible when users scrol*/
+
+/* Navigation Styles */
 nav {
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: #fff; /* White background for contrast */
   padding: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  z-index: 100; /* Ensure it stays above other elements */
 }
+
 nav ul {
   display: flex;
   justify-content: space-around;
-  list-style-type: none;
+  list-style-type: none; /* Remove default bullet points */
   margin: 0;
   padding: 0;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #C80060;
   font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
+
 nav ul li a:hover {
-  color: #800020;
+  color: #800020; /* Darker red for hover */
   text-decoration: underline;
 }
-/*Added zebra striping for better readability*/
+
+/* Table Styles */
+table {
+  display: table;
+  width: 100%; /* Make table fill the container */
+  border-spacing: 0;
+  border-collapse: collapse; /* Merge table borders for cleaner look */
+  margin-bottom: 2rem; /* Add spacing below the table */
+}
+
+table, th, td {
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #C80060;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 tbody tr:nth-child(odd) {
   background-color: #f9f9f9;
 }
 tbody tr:nth-child(even) {
   background-color: #ffffff;
 }
-/*Styled the caption to stand out*/
-caption {
-  font-weight: bold;
-  font-size: 24px;
-  color: #C80060;
-  margin-bottom: 10px;
-}
-/*Improved the contact form design for better usability*/
+
+/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px;
+  max-width: 100%;
   margin: auto;
 }
+
 input, textarea, button {
   font-size: 18px;
   padding: 0.5rem;
   border: 2px solid #C80060;
   border-radius: 5px;
 }
+
 input:focus, textarea:focus {
   outline: none;
   border-color: #800020;
-  box-shadow: 0 0 5px rgba(200, 0, 96, 0.5);
+  box-shadow: 0 0 5px rgba(200, 0, 96, 0.5); /* Subtle glow for focus */
 }
+
 button {
   background-color: #C80060;
-  transition: background-color 0.3s ease, transform 0.3s ease;
   color: white;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 button:hover {
   background-color: #800020;
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
-/*Centered the footer text and add padding*/
+
+/* Footer Styles */
 footer {
   text-align: center;
   padding: 1rem 0;
-  background-color: #f3f3f3;
+  background-color: #f3f3f3; /* Light gray for contrast */
   border-top: 1px solid #333;
 }
-/*Maked the "Back to Top" links more visually engaging*/
-a[href="#"] {
+
+/* "Back to Top" Link */
+a[href="#home"] {
   display: inline-block;
   margin-top: 1rem;
   text-decoration: none;
@@ -148,21 +155,58 @@ a[href="#"] {
   border: 2px solid #C80060;
   padding: 0.3rem 0.6rem;
   border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-a[href="#"]:hover {
+
+a[href="#home"]:hover {
   background-color: #C80060;
   color: white;
 }
-/*Ensured the layout looks good on smaller screens*/
+
+/* Responsive Design */
+/* For screens smaller than 768px (tablets and mobile) */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: column; /* Stack navigation links vertically */
     align-items: center;
   }
-  table {
-    font-size: 18px;
+
+  nav ul li {
+    margin-bottom: 0.5rem; /* Add spacing between links */
   }
+
   body {
-    font-size: 18px;
+    font-size: 16px; /* Slightly smaller text for smaller devices */
+  }
+
+  table {
+    font-size: 14px; /* Adjust table font size for smaller screens */
+  }
+
+  form {
+    padding: 0 1rem; /* Add horizontal padding for smaller devices */
+  }
+}
+
+/* For screens smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Reduce title size for small screens */
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem; /* Reduce font size for navigation links */
+  }
+
+  button {
+    font-size: 0.9rem; /* Reduce button size for smaller screens */
+  }
+
+  footer {
+    font-size: 0.8rem; /* Smaller footer text */
   }
 }
